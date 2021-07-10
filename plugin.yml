@@ -1,0 +1,5 @@
+name: ItemInteract
+version: 1.0
+main: MrNinja008\ItemInteract\Main
+api: [3.0.0]
+author: MrNinja008
