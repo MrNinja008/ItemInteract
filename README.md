@@ -8,9 +8,9 @@ Example You Can able To Open a FormUI with command when you click on that item
 
 # Features 
 - [X] ItemID can be configured in config.
-- [X] HotBarSlot Is Customisable In Config. 
-- [X] Custom Item Name is customisable In Config.
-- [X] Commands Is Customisable In Config.
+- [X] HotBarSlots are Customisable In Config. 
+- [X] Custom ItemNames are customisable In Config.
+- [X] Commands are Customisable In Config.
 - [ ] Lore Can be Customisable //todo
 
 # Pull Request
