@@ -10,7 +10,7 @@
 DisplayName: "ItemInteract"
 # Minecraft Item ID NOTE Dont Not Use ItemID if that item not implemented by Pocketmine
 ItemID: "1"
-# HotBarSlot 1 to 8 
+# HotBarSlot 1 to 9
 HotBarSlot: "1"
 # Command That you whant To Execute While You Click With that item
 command: "help" #NOTE Do not Put "/" in config
