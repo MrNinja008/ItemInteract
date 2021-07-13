@@ -1,5 +1,7 @@
 # ItemInteract
 ![Icon](https://user-images.githubusercontent.com/79526396/125243996-69425680-e30c-11eb-83d3-64c6f8456f3e.jpeg)
+[![Discord](https://img.shields.io/discord/837701868649709568.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/rqPHRxeTEu) 
+[![Poggit-Ci](https://poggit.pmmp.io/ci.shield/MrNinja008/ItemInteract/ItemInteract)](https://poggit.pmmp.io/ci/MrNinja008/ItemInteract/ItemInteract)
 
 # What This Plugin Do?
 well This Plugin Is Usefull For Some Servers Like minigames,Skyblock,Lobby
