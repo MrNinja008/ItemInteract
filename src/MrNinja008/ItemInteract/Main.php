@@ -24,18 +24,15 @@ class Main extends PluginBase implements Listener{
     public function onEnable(){
         
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        @mkdir($this->getDataFolder());
         $this->saveResource("config.yml");
-        $this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-
     }
 
     public function onJoin(PlayerJoinEvent $event){
         
         $player = $event->getPlayer();
-        $item->getId($this->cfg->get("ItemID"));
-        $item->setCustomName($this->cfg->get("DisplayName"));
-        $player->getInventory()->setItem($this->cfg->get("HotBarSlot"), $item, true);
+        $item->getId($this->getConfig()->get("ItemID"));
+        $item->setCustomName($this->getConfig()->get("DisplayName"));
+        $player->getInventory()->setItem($this->getConfig()->get("HotBarSlot"), $item, true);
 
     }
 
@@ -43,7 +40,7 @@ class Main extends PluginBase implements Listener{
 
         $player = $event->getPlayer();
         $item = $event->getItem();
-        $item->getId($this->cfg->get("ItemID"));
+        $item->getId($this->getConfig()->get("ItemID"));
       if($item->getId() == $this->getConfig()->getAll()[$args[0]]["ItemID"]){ 
         $event->setCancelled(true);
 
@@ -55,8 +52,8 @@ class Main extends PluginBase implements Listener{
 
         $player = $event->getPlayer();
         $item = $player->getInventory()->getItemInHand()->getCustomName();
-     if($item == $this->cfg->get("DisplayName")){
-        $this->getServer()->getCommandMap()->dispatch($player, $this->cfg->get("command"));
+     if($item == $this->getConfig()->get("DisplayName")){
+        $this->getServer()->getCommandMap()->dispatch($player, $this->getConfig()->get("command"));
 
         } 
 
@@ -68,7 +65,7 @@ class Main extends PluginBase implements Listener{
         foreach($transaction->getActions() as $action){
         $item = $action->getSourceItem();
         $source = $transaction->getSource();
-        if ($source instanceof Player && $item->getId($this->cfg->get("ItemID")) && $item->hasCustomName($this->cfg->get("DisplayName"))) {
+        if ($source instanceof Player && $item->getId($this->getConfig()->get("ItemID")) && $item->hasCustomName($this->getConfig()->get("DisplayName"))) {
          $event->setCancelled();
             }
         }
