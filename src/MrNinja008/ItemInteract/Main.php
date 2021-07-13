@@ -42,7 +42,7 @@ class Main extends PluginBase implements Listener {
     public function onTransaction(InventoryTransactionEvent $event) {
         $transaction = $event->getTransaction();
         foreach ($transaction->getActions() as $action) {
-            if($action->getSourceItem()->getNamedTag()->hasTag("ItemInteractPlugin"))
+           if($action->getSourceItem()->getNamedTag()->hasTag("ItemInteractPlugin"))
                 $event->setCancelled();
         }
     }
