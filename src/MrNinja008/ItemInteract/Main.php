@@ -63,11 +63,12 @@ class Main extends PluginBase implements Listener{
     }
     
     public function onTransaction(InventoryTransactionEvent $event){
+      
         $transaction = $event->getTransaction();
         foreach($transaction->getActions() as $action){
-            $item = $action->getSourceItem();
-            $source = $transaction->getSource();
-            if($source instanceof Player && $item->getId($this->cfg->get("ItemID") && $item->hasCustomName($this->cfg->get("DisplayName")){
+        $item = $action->getSourceItem();
+        $source = $transaction->getSource();
+        if($source instanceof Player && $item->getId($this->cfg->get("ItemID") && $item->hasCustomName($this->cfg->get("DisplayName")){
                 $event->setCancelled();
             }
         }
