@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener{
     public function onEnable(){
         
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
-        $this->saveResource("config.yml");
+        $this->saveDefaultConfig();
     }
 
     public function onJoin(PlayerJoinEvent $event){
