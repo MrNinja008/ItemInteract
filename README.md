@@ -13,7 +13,7 @@ Example You Can able To Open a FormUI with command when you click on that item
 - [X] HotBarSlots are Customisable In Config. 
 - [X] Custom ItemNames are customisable In Config.
 - [X] Commands are Customisable In Config.
-- [ ] Lore Can be Customisable //todo
+- [X] Lore Can be Customisable in config!
 
 # Pull Request
 If You Like To Construibite To This Plugin Feel free to make pull request!
