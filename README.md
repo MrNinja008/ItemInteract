@@ -7,6 +7,7 @@
 well This Plugin Is Usefull For Some Servers Like minigames,Skyblock,Lobby
 etc. This plugin can execute commands while you click on that item in your inventory
 Example You Can able To Open a FormUI with command when you click on that item
+I Recommend You To Use Item Ids not blocks. In config
 
 # Features 
 - [X] ItemID can be configured in config.
