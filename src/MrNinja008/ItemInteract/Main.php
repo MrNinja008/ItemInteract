@@ -24,7 +24,7 @@ class Main extends PluginBase implements Listener {
         $itemArray = explode(':', $this->getConfig()->get("ItemID"));
         if(!isset($itemArray[0]) || !isset($itemArray[1]) || !isset($itemArray[2])) {
                     $this->getLogger()->error("Config Error! Make Sure To Use ID:META:COUNT.");
-        continue;
+        return;
                 }
         $player = $event->getPlayer();
         $item = Item::get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
