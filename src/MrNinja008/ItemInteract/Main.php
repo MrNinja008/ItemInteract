@@ -29,7 +29,6 @@ class Main extends PluginBase implements Listener {
         $player = $event->getPlayer();
         $item = Item::get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
         $item->setCustomName($this->getConfig()->get("DisplayName"));
-        $item->setLore($this->getConfig()->get("Lore")); //LORE BOI
         $item->getNamedTag()->setInt("ItemInteractPlugin", 1);
         $player->getInventory()->setItem($this->getConfig()->get("HotBarSlot"), $item, true);
     }
