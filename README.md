@@ -20,5 +20,5 @@ I Recommend You To Use Item Ids not blocks. In config
 If You Like To Construibite To This Plugin Feel free to make pull request!
 
 # NOTE 
-You Can Only Able to Set HotBarSlot 1 to 9 in Config!
+You Can Only Able to Set HotBarSlot 0 to 9 in Config!
 If you have any issues pls create a issue on github repo.
