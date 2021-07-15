@@ -17,6 +17,4 @@ HotBarSlot: "1"
 #
 # Command That you whant To Execute While You Click With that item
 command: "help" 
-#item Lore! Can be custom
-Lore: "ItemInteract"
 # NOTE Do not Put "/" in config
