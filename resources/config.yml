@@ -13,8 +13,8 @@ DisplayName: "ItemInteract"
 ItemID: "399:0:1" #format ID:META:COUNT
 #     ID: META: COUNT
 #
-#HotBarSlot 1 to 9
-HotBarSlot: 9
+#HotBarSlot 1 to 8
+HotBarSlot: 8
 #
 # Command That you whant To Execute While You Click With that item
 command: "help" 
