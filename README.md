@@ -1,6 +1,6 @@
-# ItemInteract
-![Icon](https://media.discordapp.net/attachments/833740411091812410/864464160909033522/icon.png.png)
+
 # What This Plugin Do?
+<h1>ItemInteract<img src="https://github.com/MrNinja008/ItemInteract/blob/main/icon.png" height="64" width="64" align="left" alt=""></h1><br>
 [![Discord](https://img.shields.io/discord/829219859183173683.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/rqPHRxeTEu) 
 [![Poggit-Ci](https://poggit.pmmp.io/ci.shield/MrNinja008/ItemInteract/ItemInteract)](https://poggit.pmmp.io/ci/MrNinja008/ItemInteract/ItemInteract)
 
