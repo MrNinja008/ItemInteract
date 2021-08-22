@@ -56,6 +56,7 @@ class Main extends PluginBase implements Listener {
    }  
     
     public function onRespawn(PlayerRespawnEvent $event) {
+      if($this->getConfig()->get("item-on-respawn") == true){
       $player = $event->getPlayer();
         $itemArray = explode(':', $this->getConfig()->get("ItemID"));
         if(!isset($itemArray[0]) || !isset($itemArray[1]) || !isset($itemArray[2])) {
