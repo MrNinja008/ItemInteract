@@ -11,7 +11,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\inventory\InventoryTransactionEvent;
 use pocketmine\event\player\PlayerDropItemEvent;
-use pocketmine\player\PlayerRespawnEvent;
+use pocketmine\event\player\PlayerRespawnEvent;
 use function explode;
 
 class Main extends PluginBase implements Listener {
