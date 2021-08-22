@@ -11,6 +11,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerInteractEvent;
 use pocketmine\event\inventory\InventoryTransactionEvent;
 use pocketmine\event\player\PlayerDropItemEvent;
+use pocketmine\Player\PlayerRespawnEvent;
 use function explode;
 
 class Main extends PluginBase implements Listener {
@@ -50,7 +51,21 @@ class Main extends PluginBase implements Listener {
         $transaction = $event->getTransaction();
         foreach ($transaction->getActions() as $action) {
            if($action->getSourceItem()->getNamedTag()->hasTag("ItemInteractPlugin"))
-                $event->setCancelled();
-        }
+              $event->setCancelled();
+       }
+   }  
+    
+    public function onRespawn(PlayerRespawnEvent $event) {
+      $player = $event->getPlayer();
+        $itemArray = explode(':', $this->getConfig()->get("ItemID"));
+        if(!isset($itemArray[0]) || !isset($itemArray[1]) || !isset($itemArray[2])) {
+                    $this->getLogger()->error("Config Error! Make Sure To Use ID:META:COUNT.");
+        return;
+                }
+        $player = $event->getPlayer();
+        $item = Item::get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
+        $item->setCustomName("§r".$this->getConfig()->get("DisplayName"));
+        $item->getNamedTag()->setInt("ItemInteractPlugin", 1);
+        $player->getInventory()->setItem($this->getConfig()->get("HotBarSlot"), $item, true);
     }
 }
