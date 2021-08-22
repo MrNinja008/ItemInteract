@@ -15,7 +15,9 @@ ItemID: "399:0:1" #format ID:META:COUNT
 #
 #HotBarSlot 1 to 8
 HotBarSlot: 8
-#
+#Item On Respawn If you have keepinventory enable make it false 
+#if you dont have keepinventory make it true.
+item-on-respawn: false
 # Command That you whant To Execute While You Click With that item
 command: "help" 
 # NOTE Do not Put "/" in config
