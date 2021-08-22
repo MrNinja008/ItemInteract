@@ -7,11 +7,12 @@
 
 ## Features
 - HotBarSlot Configurable 
-- ItemID Customisable in Config
-- ItemName Can Be Configurable In config
-- Cant Able To Move item (from inventory)
+- ItemID Configurable in Config
+- ItemName Can Be Configurable from config
+- Item Cannot be Move (from inventory)
 - Item Cannot be dropped (from inventory)
 - Easy And Usefull
+- Item On Respawn configurable from config
 - Made with ❤️
 ## NOTE 
 You Can Only Able to Set HotBarSlot 0 to 8 in Config!
