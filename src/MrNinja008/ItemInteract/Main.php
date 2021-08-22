@@ -70,3 +70,4 @@ class Main extends PluginBase implements Listener {
         $player->getInventory()->setItem($this->getConfig()->get("HotBarSlot"), $item, true);
     }
 }
+}
