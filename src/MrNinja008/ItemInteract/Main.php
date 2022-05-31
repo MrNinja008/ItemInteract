@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace MrNinja008\ItemInteract;
 
 use pocketmine\item\Item;
+use pocketmine\item\ItemFactory;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -15,7 +16,7 @@ use pocketmine\event\player\PlayerRespawnEvent;
 use function explode;
 
 class Main extends PluginBase implements Listener {
-    public function onEnable() {
+    public function onEnable(): void{
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         $this->saveDefaultConfig();
     }
@@ -28,7 +29,7 @@ class Main extends PluginBase implements Listener {
         return;
                 }
         $player = $event->getPlayer();
-        $item = Item::get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
+        $item = ItemFactory::getInstance()->get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
         $item->setCustomName("§r".$this->getConfig()->get("DisplayName"));
         $item->getNamedTag()->setInt("ItemInteractPlugin", 1);
         $player->getInventory()->setItem($this->getConfig()->get("HotBarSlot"), $item, true);
@@ -37,7 +38,7 @@ class Main extends PluginBase implements Listener {
     public function onDrop(PlayerDropItemEvent $event) {
         $item = $event->getItem();
         if($item->getNamedTag()->hasTag("ItemInteractPlugin"))
-            $event->setCancelled(true);
+            $event->cancel();
     }
 
     public function onClick(PlayerInteractEvent $event) {
@@ -51,7 +52,7 @@ class Main extends PluginBase implements Listener {
         $transaction = $event->getTransaction();
         foreach ($transaction->getActions() as $action) {
            if($action->getSourceItem()->getNamedTag()->hasTag("ItemInteractPlugin"))
-              $event->setCancelled();
+              $event->cancel();
        }
    }  
     
@@ -64,7 +65,7 @@ class Main extends PluginBase implements Listener {
         return;
                 }
         $player = $event->getPlayer();
-        $item = Item::get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
+        $item = ItemFactory::getInstance()->get((int)$itemArray[0], (int)$itemArray[1], (int)$itemArray[2]); //FORMAT ID:META:COUNT
         $item->setCustomName("§r".$this->getConfig()->get("DisplayName"));
         $item->getNamedTag()->setInt("ItemInteractPlugin", 1);
         $player->getInventory()->setItem($this->getConfig()->get("HotBarSlot"), $item, true);
